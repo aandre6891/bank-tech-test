@@ -36,13 +36,6 @@ The `withdraw()` method allows the user to withdraw a specified amount of money 
 - `value` (number): The amount of money to withdraw.
 - `date` (string): The date of the withdrawal.
 
-### calculateBalance(value, type)
-
-The `calculateBalance()` method calculates the balance of the account based on the previous balance and the type of transaction (deposit or withdrawal). It takes two parameters:
-
-- `value` (number): The amount of the transaction.
-- `type` (string): The type of the transaction, either "deposit" or "withdrawal".
-
 ### printStatement()
 
 The `printStatement()` method prints a statement of account, displaying the date, credit (deposit), debit (withdrawal), and balance after each transaction in the account.
