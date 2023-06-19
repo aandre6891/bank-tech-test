@@ -26,7 +26,7 @@ class Bank {
 
   printStatement() {
     console.log("date || credit || debit || balance");
-    const statement = this.account.reverse().map((transaction) => {
+    this.account.reverse().map((transaction) => {
       if (transaction.type === "withdrawal") {
         console.log(transaction.date + " || || " + transaction.amount.toFixed(2) + " || " + transaction.balance.toFixed(2));
       } else {
