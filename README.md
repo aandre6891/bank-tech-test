@@ -1,6 +1,6 @@
 # Bank Class
 
-The `Bank` class represents a simple banking system that allows users to deposit and withdraw money, and generate a statement of the account.
+The `Bank` class represents a simple banking system that allows users to deposit, withdraw money and generate a statement of the account.
 
 ## Usage example inputs for Node
 
