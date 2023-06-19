@@ -10,6 +10,14 @@ class Bank {
       type: "deposit",
     });
   }
+
+  withdraw(value, date) {
+    this.account.push({
+      amount: value,
+      date: date,
+      type: "withdrawal",
+    });
+  }
 }
 
 module.exports = Bank;
