@@ -1,4 +1,4 @@
-const Account = require("./account");
+const Account = require("../src/account");
 let account;
 
 describe("Transaction", () => {
