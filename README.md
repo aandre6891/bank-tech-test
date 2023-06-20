@@ -1,44 +1,69 @@
-# Bank Class
+# Bank Account System
 
-The `Bank` class represents a simple banking system that allows users to deposit, withdraw money and generate a statement of the account.
+The bank account system consists of the following two classes: `Account` and `Statement`. The `Account` class allows for depositing and withdrawing money, while the `Statement` class generates an account statement.
 
+## Setup
+
+To use the bank account system, follow these steps:
+
+1. Setup your environment to use node latest version: `nvm use node`.
+2. Create an empty project directory and clone this repo in it.
+3. Initialise the NPM project (this will create a file package.json): `npm init -y`.
+3. Run node in your terminal:  `node`.
+4. Require the class Account from the file account.js: `const Account = require('./src/account');`.
+4. Create an instance of the `Account` class using the `new` keyword: `const account = new Account();`.
+5. Use the available methods (`deposit`, `withdraw`, `printStatement`) to interact with the bank and generate statements. (use the example inputs below as a reference)
 ## Usage example inputs for Node
 
 ```javascript
-const Bank = require('./bank');
 
-const bank = new Bank();
+const Account = require('./src/account');
 
-bank.deposit(1000, '10/01/2023');
-bank.deposit(2000, '13/01/2023');
-bank.withdraw(500, '14/01/2023');
+const account = new Account();
 
-bank.printStatement();
+account.deposit(1000, '10/01/2023');
+account.deposit(2000, '13/01/2023'); 
+account.withdraw(500, '14/01/2023');
+
+account.printStatement();
 ```
 
-## Methods
+## Account Class
+The `Account` class represents a bank account and provides methods for depositing and withdrawing money.
+### Methods
 
-### constructor()
+#### constructor()
 
-The constructor initializes a new instance of the `Bank` class with an empty account array.
+The constructor initializes a new instance of the `Account` class with an empty account array and set the balance to 0.
 
-### deposit(value, date)
+#### deposit(amount, date)
 
 The `deposit()` method allows the user to deposit a specified amount of money into the account. It takes two parameters:
 
-- `value` (number): The amount of money to deposit.
+- `amount` (number): The amount of money to deposit.
 - `date` (string): The date of the deposit.
 
-### withdraw(value, date)
+#### withdraw(amount, date)
 
 The `withdraw()` method allows the user to withdraw a specified amount of money from the account. It takes two parameters:
 
-- `value` (number): The amount of money to withdraw.
+- `amount` (number): The amount of money to withdraw.
 - `date` (string): The date of the withdrawal.
 
-### printStatement()
+#### printStatement()
 
-The `printStatement()` method prints a statement of account, displaying the date, credit (deposit), debit (withdrawal), and balance after each transaction in the account.
+the `printStatement()` method calls the `print()` method on the `Statement` class passing the account's transaction history as an argument.
+
+
+## Statement Class
+
+The `Statement` class generates an account statement.
+
+### Methods
+
+### print()
+
+The `print()` method prints a statement of the account, displaying the date, credit (deposit), debit (withdrawal), and balance after each transaction in the account.
 
 ## Example Output
 
@@ -51,18 +76,6 @@ date || credit || debit || balance
 
 The statement is displayed in the format: "date || credit || debit || balance", with each transaction represented as a row showing the corresponding details.
 
-## Setup
-
-To use the `Bank` class, follow these steps:
-
-1. Setup your environment to use node latest version: `nvm use node`.
-2. Create an empty project directory.
-3. Initialise the NPM project (this will create a file package.json): `npm init -y`.
-3. Run node in your terminal:  `node`.
-4. Require the class Bank from the file bank.js: `const Bank = require('./bank');`.
-4. Create an instance of the `Bank` class using the `new` keyword: `const bank = new Bank();`.
-5. Use the available methods (`deposit`, `withdraw`, `printStatement`) to interact with the bank and generate statements. (use the example inputs at the    beginning of this file as a reference)
-
 ## Testing
 
 To test the `Bank` class, you can use Jest, a popular JavaScript testing framework. Follow these steps to set up and run the tests:
@@ -70,3 +83,7 @@ To test the `Bank` class, you can use Jest, a popular JavaScript testing framewo
 1. Add the jest package to test the project: `npm add jest`.
 2. Install jest "globally": `npm install -g jest`
 3. Run the tests: `jest`
+
+## Screenshot
+
+![Screenshot](./screenshot.png)
