@@ -1,3 +1,4 @@
+const Statement = require("./statement");
 class Account {
   constructor() {
     this.transactions = [];
@@ -22,6 +23,11 @@ class Account {
       type: "withdrawal",
       balance: newBalance,
     });
+  }
+
+  printStatement() {
+    const statement = new Statement();
+    statement.print(this.transactions);
   }
 }
 
