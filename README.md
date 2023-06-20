@@ -7,7 +7,7 @@ The bank account system consists of the following two classes: `Account` and `St
 To use the bank account system, follow these steps:
 
 1. Setup your environment to use node latest version: `nvm use node`.
-2. Create an empty project directory and clone this repo in it.
+2. Create an empty project directory and clone this repo in it. `https://github.com/aandre6891/bank-tech-test`.
 3. Initialise the NPM project (this will create a file package.json): `npm init -y`.
 3. Run node in your terminal:  `node`.
 4. Require the class Account from the file account.js: `const Account = require('./src/account');`.
@@ -16,6 +16,8 @@ To use the bank account system, follow these steps:
 ## Usage example inputs for Node
 
 ```javascript
+
+`this code must be executed in the terminal`
 
 const Account = require('./src/account');
 
@@ -34,7 +36,7 @@ The `Account` class represents a bank account and provides methods for depositin
 
 #### constructor()
 
-The constructor initializes a new instance of the `Account` class with an empty account array and set the balance to 0.
+The constructor initializes a new instance of the `Account` class with an empty account array and sets the balance to 0.
 
 #### deposit(amount, date)
 
